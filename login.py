@@ -8,7 +8,7 @@ class Login_System:
         self.root.geometry('1350x700+0+0')
         self.root.resizable(False,False)
         ########## ALL IMAGES ###########
-        self.bg_icon = ImageTk.PhotoImage(file='bg.jpg')
+        self.bg_icon = ImageTk.PhotoImage(file='../loginSystem/bg.jpg')
         bg_lbl = Label(self.root, image=self.bg_icon).place(x=0,y=0)
 
 
@@ -37,7 +37,7 @@ class Login_System:
 
     def login_system(self):
         if self.user_ent.get() == '' or self.pass_ent.get() == '':
-            messagebox.showerror('Error','must be filled')
+            messagebox.showerror('Error','All fields are required')
         elif self.user_ent.get() != 'Parween' or self.pass_ent.get() !='123456':
             messagebox.showerror('Warning','wrong User Name/ Password')
         else:
